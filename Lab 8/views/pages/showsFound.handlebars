@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<body class="showsFound-body">
+    <h1 class="title">Shows Found</h1>
+    <h2 class="showsFoundName">{{searchTerm}}</h2>
+    <section class="showsFound-section">
+        {{#if shows}}
+            <ul class="showsFound-ul">
+                {{#each shows}}
+                <li class="showsFound-li"><a href="/show/{{show.id}}">{{show.name}}</a></li>
+                {{/each}}
+            </ul>
+        {{else}} 
+            <a href="error.handlebars"></a>
+        {{/if}}
+        <a class="showsFound-again" href="/">Search Again</a>
+    </section>
+</body>

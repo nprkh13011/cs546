@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<body class="showFinder-Body">
+  <section>
+    <h1 class="title">SHOW FINDER</h1>
+      <article>
+        <p class="showFind">This is a website to search for any shows 
+          using a search term keyword. ANY SHOW? ANY SHOW! CRAZY RIGHT?!
+        </p>
+      <form class='form' action ="/searchshows" method="POST">
+        <label for="ShowName">Enter a show: </label>
+        <input id ="ShowName" name="showSearchTerm" type="text"/>
+        <button class="showFindButton" type="submit">SUBMIT</button>
+      </form>
+      </article>
+      {{#if error}}
+      <p class={{class}}> {{error}}</p> 
+      {{/if}}
+  </section>
+</body>
+</html>

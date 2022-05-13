@@ -1,0 +1,15 @@
+{
+  "name": "cs546-lab4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Nidhi Parekh 10452568",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^4.3.1"
+  }
+}

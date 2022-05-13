@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{#if show.name}}
+<body class="showNameByID-body">
+    <title class="title">{{show.name}}</title>
+    <article>
+        <h1 class="name">{{show.name}}</h1>
+            {{#if show.image.medium}}
+                <img src="{{show.image.medium}}" alt="{{show.name}}"/> 
+            {{else}}
+                <img src="/public/static/No-Photo-Available.jpg" alt="No Image Available"/>
+            {{/if}}
+            <dl class="show-def-list">
+                <dt class="ID-Languages">Languages</dt> 
+                    {{#if show.language}}
+                        <dd>{{show.language}}</dd>
+                    {{else}}
+                        <dd>N/A</dd>
+                    {{/if}}
+
+                <dt class="ID-Genres">Genres</dt>
+                    {{#if show.genres.length}}
+                       <dd> <ul class="showGenres">
+                            {{#each show.genres}}
+                               <li>{{this}}</li>
+                            {{/each}}
+                        </ul>
+                        </dd>
+                        {{else}}
+                            <dd>N/A</dd>
+                    {{/if}}
+
+                <dt class="ID-Average-Rating">Average Rating</dt>
+                    {{#if show.rating.average}}
+                        <dd>{{show.rating.average}}</dd>
+                    {{else}}
+                        <dd>N/A</dd>
+                    {{/if}}
+        
+                <dt class="ID-NetworkName">Network Name</dt>
+                    {{#if show.network.name}}
+                        <dd>{{show.network.name}}</dd>
+                     {{else}}
+                        <dd>N/A</dd>
+                    {{/if}}
+
+                <dt class="ID-Summary">Summary</dt>
+                    {{#if show.summary}}
+                    <dd class="show-summary">{{{show.summary}}}</dd>
+                    {{else}}
+                        <dd>N/A</dd>
+                    {{/if}}
+            </dl>
+    </article>
+</body>
+{{else}}
+    {{#if error}}
+        <p class={{class}}> {{error}}</p> 
+    {{/if}}
+{{/if}}

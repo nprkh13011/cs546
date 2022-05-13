@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 8 - 2.0</title>
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+<body>
+    <header>
+        <h1>Lab 8 - 2.0</h1>
+    </header>
+    <!-- https://stackoverflow.com/questions/11587141/initially-hiding-a-div-for-later-display -->
+    
+    <form id="searchForm">
+        <label for="search_term">Enter Search Term: </label>
+        <input type="text" id="search_term">
+        <button text="submit">Submit</button>
+    </form>
+    <ul id="showList" hidden="true"></ul>
+    <div id="show" hidden="true"></div>
+    <a href ="/" id="homeLink" hidden="true">Back to All Shows</a>
+    <p class="Error" hidden="true">Error: Invalid Search</p>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+    <script src ="../public/shows.js"></script>
+    <footer>
+        <br>Nidhi Parekh 10452568
+        <br>bee-boo-boo-bop, boo-boo-beep
+    </footer>
+</body>
+</html>

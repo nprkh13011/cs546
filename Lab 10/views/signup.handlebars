@@ -1,0 +1,17 @@
+{{!-- Get '/signup' method in routes  --}}
+<title>{{title}}</title>
+<form action= "/signup" id="signup-form" method="POST"> 
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username"/>
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password"/>
+    <button type="submit">Sign In</button>
+    <a href="/">Already have an account? Click here to log-in</a>
+     {{#if error}}
+      <p class={{class}}> {{error}}</p> 
+    {{/if}}
+</form>
+    {{!-- {{#if error}}
+      <p class={{class}}> {{error}}</p> 
+    {{/if}} --}}
